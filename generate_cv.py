@@ -68,15 +68,17 @@ def create_australian_cv():
     job1 = doc.add_paragraph()
     run = job1.add_run("Full Stack Software Developer")
     run.font.bold = True
-    job1_meta = doc.add_paragraph("ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present")
+    job1_meta = doc.add_paragraph("ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present (Project-Based Contract)")
     job1_meta.paragraph_format.space_after = Pt(3)
     
     job1_details = [
-        "Designed, developed, and maintained full stack web applications.",
-        "Built REST APIs and backend services with Node.js, Java, and .NET.",
-        "Developed responsive frontend interfaces using Angular.",
-        "Handled debugging, troubleshooting, and performance tuning.",
-        "Collaborated in Agile teams for testing, deployment, and release support."
+        "Design, develop, and maintain full stack web applications based on client requirements.",
+        "Develop and integrate REST APIs and backend services using Node.js, Java, and .NET.",
+        "Build responsive frontend interfaces using Angular and modern web technologies.",
+        "Perform debugging, troubleshooting, and performance optimization.",
+        "Collaborate with project managers and technical teams in Agile environment.",
+        "Participate in system enhancements, testing, and deployment activities.",
+        "Ensure code quality, scalability, and security compliance."
     ]
     for detail in job1_details:
         doc.add_paragraph(detail, style='List Bullet')
@@ -85,13 +87,16 @@ def create_australian_cv():
     job2 = doc.add_paragraph()
     run = job2.add_run("Software Engineering / Packaged App Development Associate")
     run.font.bold = True
-    job2_meta = doc.add_paragraph("Accenture Inc. – Cebu IT Park, Cebu City | February 27, 2023 – March 18, 2026")
+    job2_meta = doc.add_paragraph("Accenture Inc. – Ebloc 2, Cebu IT Park, Cebu City, Philippines | February 27, 2023 – March 18, 2026")
     job2_meta.paragraph_format.space_after = Pt(3)
     
     job2_details = [
-        "Supported enterprise-level packaged application development.",
-        "Performed system enhancements, debugging, and production support.",
-        "Collaborated with global teams in an Agile delivery model."
+        "Developed and supported enterprise-level software applications.",
+        "Worked on packaged application development and system enhancements.",
+        "Participated in software testing, debugging, and production support.",
+        "Collaborated with global teams in Agile delivery environment.",
+        "Delivered system fixes and enhancements within SLA timelines.",
+        "Supported API integrations and backend services using Java, .NET, and Node.js."
     ]
     for detail in job2_details:
         doc.add_paragraph(detail, style='List Bullet')
@@ -204,15 +209,17 @@ def create_professional_cv():
     job1 = doc.add_paragraph()
     run = job1.add_run("Full Stack Software Developer")
     run.font.bold = True
-    job1_meta = doc.add_paragraph("ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present")
+    job1_meta = doc.add_paragraph("ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present (Project-Based Contract)")
     job1_meta.paragraph_format.space_after = Pt(3)
     
     job1_details = [
-        "Designed, developed, and maintained full stack web applications.",
-        "Built REST APIs and backend services with Node.js, Java, and .NET.",
-        "Developed responsive frontend interfaces using Angular.",
-        "Handled debugging, troubleshooting, and performance tuning.",
-        "Collaborated in Agile teams for testing, deployment, and release support."
+        "Design, develop, and maintain full stack web applications based on client requirements.",
+        "Develop and integrate REST APIs and backend services using Node.js, Java, and .NET.",
+        "Build responsive frontend interfaces using Angular and modern web technologies.",
+        "Perform debugging, troubleshooting, and performance optimization.",
+        "Collaborate with project managers and technical teams in Agile environment.",
+        "Participate in system enhancements, testing, and deployment activities.",
+        "Ensure code quality, scalability, and security compliance."
     ]
     for detail in job1_details:
         doc.add_paragraph(detail, style='List Bullet')
@@ -221,13 +228,16 @@ def create_professional_cv():
     job2 = doc.add_paragraph()
     run = job2.add_run("Software Engineering / Packaged App Development Associate")
     run.font.bold = True
-    job2_meta = doc.add_paragraph("Accenture Inc. – Cebu IT Park, Cebu City | February 27, 2023 – March 18, 2026")
+    job2_meta = doc.add_paragraph("Accenture Inc. – Ebloc 2, Cebu IT Park, Cebu City, Philippines | February 27, 2023 – March 18, 2026")
     job2_meta.paragraph_format.space_after = Pt(3)
     
     job2_details = [
-        "Supported enterprise-level packaged application development.",
-        "Performed system enhancements, debugging, and production support.",
-        "Collaborated with global teams in an Agile delivery model."
+        "Developed and supported enterprise-level software applications.",
+        "Worked on packaged application development and system enhancements.",
+        "Participated in software testing, debugging, and production support.",
+        "Collaborated with global teams in Agile delivery environment.",
+        "Delivered system fixes and enhancements within SLA timelines.",
+        "Supported API integrations and backend services using Java, .NET, and Node.js."
     ]
     for detail in job2_details:
         doc.add_paragraph(detail, style='List Bullet')
