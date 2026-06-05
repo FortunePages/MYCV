@@ -1,609 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolyn Kiunisala | CV</title>
-    <meta name="description" content="Australian-style CV for Rolyn Kiunisala, Full Stack Software Developer.">
-    <style>
-        :root {
-            color-scheme: light;
-            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: #1f2937;
-            background: #f8fafc;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f8fafc;
-        }
-        .page {
-            width: min(100%, 900px);
-            margin: 0 auto;
-            padding: 32px 24px 48px;
-            background: white;
-            min-height: 100vh;
-        }
-        .header {
-            display: grid;
-            gap: 10px;
-            margin-bottom: 28px;
-        }
-        .top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        h1 {
-            margin: 0;
-            font-size: clamp(2rem, 2.5vw, 2.6rem);
-            letter-spacing: -0.03em;
-        }
-        .contact {
-            color: #475569;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .contact a {
-            color: #0f172a;
-            text-decoration: none;
-            word-break: break-all;
-        }
-        .download-bar {
-            margin-top: 14px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 18px;
-            background: #0f172a;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-        .download-button:hover {
-            background: #111827;
-            transform: translateY(-1px);
-        }
-        .section {
-            margin-top: 28px;
-        }
-        .section h2 {
-            margin-bottom: 14px;
-            font-size: 1.05rem;
-            letter-spacing: 0.01em;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 10px;
-            color: #0f172a;
-        }
-        p, li {
-            color: #334155;
-            font-size: 0.98rem;
-        }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-            list-style: disc;
-        }
-        .experience-item,
-        .education-item,
-        .achievement-item {
-            margin-bottom: 22px;
-        }
-        .job-title,
-        .education-title,
-        .achievement-title {
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 6px;
-        }
-        .job-meta,
-        .education-meta,
-        .achievement-meta,
-        .strengths-note {
-            color: #475569;
-            font-size: 0.92rem;
-            margin-bottom: 10px;
-        }
-        .skills-list,
-        .strength-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 8px 16px;
-            padding-left: 0;
-            list-style: none;
-            margin: 0;
-        }
-        .skills-list li,
-        .strength-list li {
-            position: relative;
-            padding-left: 18px;
-            line-height: 1.7;
-        }
-        .skills-list li::before,
-        .strength-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #0f172a;
-        }
-        .footer-note {
-            margin-top: 32px;
-            color: #475569;
-            font-size: 0.92rem;
-        }
-        @media (max-width: 640px) {
-            .top-row {
-                flex-direction: column;
-            }
-            .download-bar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolyn Kiunisala | CV</title>
+  <meta name="description" content="Australian-style CV for Rolyn Kiunisala, Full Stack Software Developer." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      background: #fff;
+      min-height: 100vh;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 2.6vw, 2.6rem);
+      letter-spacing: -0.03em;
+    }
+    .contact {
+      color: #475569;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+    .contact a {
+      color: #0f172a;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      background: #0f172a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .download-button:hover {
+      transform: translateY(-1px);
+      background: #111827;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    p, li {
+      margin: 0;
+      color: #334155;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+    .skills-list li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0f172a;
+    }
+    .job-title,
+    .education-title,
+    .achievement-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+    .meta {
+      margin-bottom: 12px;
+      color: #475569;
+      font-size: 0.92rem;
+    }
+    .footer-note {
+      margin-top: 36px;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 660px) {
+      .header {
+        flex-direction: column;
+      }
+      .download-button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <main class="page">
-        <div class="header">
-            <div class="top-row">
-                <div>
-                    <h1>ROLYN KIUNISALA</h1>
-                    <div class="contact">
-                        Cebu, Philippines<br>
-                        <a href="mailto:rolynkiunisala@gmail.com">rolynkiunisala@gmail.com</a><br>
-                        +63 906 454 4620<br>
-                        <a href="https://www.linkedin.com/in/rolyn-kiunisala-b862ab377/" target="_blank">linkedin.com/in/rolyn-kiunisala-b862ab377</a>
-                    </div>
-                </div>
-                <div class="download-bar">
-                    <a class="download-button" href="Rolyn_Kiunisala_CV.docx" download>
-                        Download current CV
-                    </a>
-                </div>
-            </div>
+  <main class="page">
+    <div class="header">
+      <div>
+        <h1>ROLYN KIUNISALA</h1>
+        <div class="contact">
+          Cebu, Philippines<br>
+          Email: <a href="mailto:rolynkiunisala@gmail.com">rolynkiunisala@gmail.com</a><br>
+          Phone: +63 906 454 4620<br>
+          LinkedIn: <a href="https://www.linkedin.com/in/rolyn-kiunisala-b862ab377/" target="_blank">linkedin.com/in/rolyn-kiunisala-b862ab377</a>
         </div>
-
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p>Full Stack Software Developer with 3+ years’ experience designing, developing and supporting web and enterprise applications. Skilled in backend and frontend development, REST API design, cloud deployments and Agile delivery. Proven track record delivering client-focused solutions, automation initiatives and performance improvements while maintaining code quality and security.</p>
-        </section>
-
-        <section class="section">
-            <h2>Core Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Languages:</strong> Java, JavaScript, C#, Python, PHP</li>
-                <li><strong>Frontend:</strong> HTML, CSS/SCSS, Angular, React (basic)</li>
-                <li><strong>Backend:</strong> Node.js, .NET, Java, Python</li>
-                <li><strong>Databases:</strong> MySQL, SQL</li>
-                <li><strong>Cloud & DevOps:</strong> AWS, Azure DevOps, CI/CD, AWS Lambda</li>
-                <li><strong>Tools:</strong> Git, GitHub, VS Code, Visual Studio, GitHub Copilot</li>
-                <li><strong>Methodologies:</strong> Agile / Scrum</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Professional Experience</h2>
-
-            <article class="experience-item">
-                <div class="job-title">Full Stack Software Developer</div>
-                <div class="job-meta">ALMA Phil Manpower Services Corp. — Cebu City, Philippines | March 2026 – Present</div>
-                <ul>
-                    <li>Design, develop and maintain full-stack web applications to satisfy client requirements.</li>
-                    <li>Build and integrate RESTful APIs and backend services using Node.js, Java and .NET.</li>
-                    <li>Develop responsive front-end interfaces with Angular and modern web technologies.</li>
-                    <li>Troubleshoot and optimise application performance and reliability.</li>
-                    <li>Participate in testing, deployment and system enhancement activities within Agile sprints.</li>
-                </ul>
-            </article>
-
-            <article class="experience-item">
-                <div class="job-title">Software Engineering / Packaged App Development Associate</div>
-                <div class="job-meta">Accenture Inc. — Ebloc 2, Cebu IT Park, Cebu City, Philippines | February 2023 – March 2026</div>
-                <ul>
-                    <li>Developed and supported enterprise-level packaged applications and system enhancements.</li>
-                    <li>Delivered fixes and enhancements within SLA timelines and supported production environments.</li>
-                    <li>Implemented API integrations and backend services using Java, .NET and Node.js.</li>
-                    <li>Collaborated with global teams to deliver features in Agile delivery cycles.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <article class="education-item">
-                <div class="education-title">Bachelor of Science in Computer Engineering</div>
-                <div class="education-meta">University of Cebu — Main Campus, Cebu City | 2017 – 2018</div>
-            </article>
-            <article class="education-item">
-                <div class="education-title">Arcelio Memorial National High School</div>
-                <div class="education-meta">San Vicente, Liloan, Cebu</div>
-            </article>
-            <article class="education-item">
-                <div class="education-title">Simeon Ayuda Elementary School</div>
-                <div class="education-meta">San Vicente, Liloan, Cebu</div>
-            </article>
-        </section>
-
-        <section class="section">
-            <h2>Projects & Achievements</h2>
-            <article class="achievement-item">
-                <div class="achievement-title">GEN AI Mini-Hackathon Winner (2025)</div>
-                <div class="achievement-meta">Team of 5</div>
-                <ul>
-                    <li>Built a conversational AI agent to guide teams in creating structured change requests, capturing environment, resources, schedule and requirements.</li>
-                    <li>Generated structured summaries for submission and approval; strengthened skills in AI integration and automation.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="section">
-            <h2>Key Strengths</h2>
-            <ul class="strength-list">
-                <li>Strong analytical and problem-solving skills</li>
-                <li>Effective independent worker and collaborative team member</li>
-                <li>Quick learner of new technologies</li>
-                <li>Clear communicator; adaptable in fast-paced projects</li>
-            </ul>
-        </section>
-
-        <p class="footer-note"><strong>References:</strong> Available on request.</p>
-    </main>
-</body>
-</html>
-
-        }
-
-        .australian-format .section-title {
-            background: none;
-            color: #000;
-            padding: 0;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            border-bottom: 1px solid #000;
-            font-size: 1.1em;
-            font-weight: bold;
-            padding-bottom: 5px;
-            page-break-after: avoid;
-        }
-
-        .australian-format .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .australian-format .column {
-            text-align: left;
-        }
-
-        .australian-format .skill-item {
-            margin-bottom: 5px;
-            font-size: 0.9em;
-            color: #333;
-        }
-
-        .australian-format .skill-item:before {
-            content: "• ";
-            margin-right: 8px;
-        }
-
-        .australian-format .experience-item {
-            margin-bottom: 15px;
-            page-break-inside: avoid;
-        }
-
-        .australian-format .job-title {
-            font-weight: bold;
-            color: #000;
-            margin-top: 10px;
-        }
-
-        .australian-format .job-period {
-            font-size: 0.9em;
-            color: #333;
-            margin-bottom: 3px;
-        }
-
-        .australian-format .job-description ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        .australian-format .job-description li {
-            margin-bottom: 6px;
-            font-size: 0.9em;
-            color: #333;
-        }
-
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                max-width: 100%;
-                min-height: 100%;
-            }
-            .control-panel {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Control Panel -->
-    <div class="control-panel">
-        <div>
-            <select id="formatSelect" onchange="switchFormat()">
-                <option value="professional">Professional Format</option>
-                <option value="australian">Australian Format</option>
-            </select>
-        </div>
-        <div style="margin-top: 10px;">
-            <button onclick="downloadPDF()">📥 Download PDF</button>
-        </div>
-    </div>
-    <!-- Professional Format (Default) -->
-    <div class="professional-format" id="professionalFormat">
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="header">
-                <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-                <h1>ROLYN<br>KIUNISALA</h1>
-                <p class="title">Software Engineer / Full-Stack Developer</p>
-            </div>
-
-            <div class="section-title">Contact</div>
-            <div class="contact-item">
-                <span>📧</span>
-                <a href="mailto:rolynkiunisala@gmail.com" style="color: white; text-decoration: none;">rolykkiunisala@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <span>📱</span>+63 9064544620
-            </div>
-            <div class="contact-item">
-                <span>📍</span>Curva, San-Vicente, Liloan, Cebu
-            </div>
-
-            <div class="section-title">Education</div>
-            <div class="education-item">
-                <div class="education-year">2012 - 2018</div>
-                <div class="education-title">Bachelor of Science in Computer Engineering</div>
-            </div>
-
-            <div class="section-title">Skills</div>
-            <div class="skill-item">HTML</div>
-            <div class="skill-item">CSS / SCSS</div>
-            <div class="skill-item">Javascript</div>
-            <div class="skill-item">Angular</div>
-            <div class="skill-item">C#</div>
-            <div class="skill-item">Node.JS</div>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">MY SQL</div>
-            <div class="skill-item">AWS</div>
-            <div class="skill-item">Amethyst Studio</div>
-            <div class="skill-item">Agile</div>
-            <div class="skill-item">AzureDevOps</div>
-            <div class="skill-item">OR / GitHub</div>
-            <div class="skill-item">Network Infrastructure</div>
-            <div class="skill-item">Deployment</div>
-            <div class="skill-item">SCM / Repository Management (branch updates, merges, pull requests)</div>
-
-            <div class="section-title">Soft Skills</div>
-            <div class="soft-skill-item">Attention to detail</div>
-            <div class="soft-skill-item">Time Management</div>
-            <div class="soft-skill-item">Willing to learn</div>
-            <div class="soft-skill-item">Teamwork</div>
-            <div class="soft-skill-item">Problem solving</div>
-            <div class="soft-skill-item">Communication</div>
-
-            <div class="section-title">Tools</div>
-            <div class="skill-item">Visual Studio</div>
-            <div class="skill-item">VS Code</div>
-            <div class="skill-item">Github</div>
-            <div class="skill-item">Github Copilot</div>
-
-            <div class="section-title">Language</div>
-            <div class="skill-item">English</div>
-            <div class="skill-item">Filipino</div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main">
-            <div class="main-title">PROFILE SUMMARY</div>
-            <p style="text-align: justify; margin-bottom: 30px;">
-                Software Developer with over 3 years of experience in full-stack web application development. Strong background in backend APIs, database-driven systems, and frontend development using Node.js and Angular. Experienced in Agile environments, system improvements, and cloud-based deployments. Adaptable and quick to learn new technologies.
-            </p>
-
-            <div class="main-title">Experience</div>
-
-            <div class="experience-item">
-                <div class="job-period">FEB 2023 - Present</div>
-                <div class="job-title">Junior Software Engineer (Package Application Developer / Web Developer)</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Developed and improved web applications, internal systems, and APIs in line with business requirements.</li>
-                        <li>Contributed to both backend and frontend development using Node.js, Angular, Python, and MySQL.</li>
-                        <li>Assisted with application support and maintenance, including bug fixes, performance enhancements, and feature updates.</li>
-                        <li>Participated in requirements discussions, design reviews, and sprint planning with project managers and Product Owner.</li>
-                        <li>Conducted unit testing, troubleshooting, and validation prior to deployment.</li>
-                        <li>Prepared and maintained technical and system documentation to support development and ongoing maintenance.</li>
-                        <li>Worked collaboratively with cross-functional teams in an Agile/Scrum environment.</li>
-                        <li>Developed a proof-of-concept Agentic AI system, integrating AI workflows with web applications and databases.</li>
-                        <li>Managed team branches and repository updates (SCM).</li>
-                        <li>Automated UI/backend deployments.</li>
-                        <li>Debugged APIs and monitored Lambda functions (Env Manager).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="experience-item">
-            <div class="job-period">FEB 27, 2023 - MAR 18, 2026</div>
-            <div class="job-title">Junior Software Engineer (Package Application Developer / Web Developer)</div>                <div class="job-description">
-                    <ul>
-                        <li>Developed and improved web applications, internal systems, and APIs in line with business requirements.</li>
-                        <li>Contributed to both backend and frontend development using Node.js, Angular, Python, and MySQL.</li>
-                        <li>Assisted with application support and maintenance, including bug fixes, performance enhancements, and feature updates.</li>
-                        <li>Participated in requirements discussions, design reviews, and sprint planning with project managers and Product Owner.</li>
-                        <li>Conducted unit testing, troubleshooting, and validation prior to deployment.</li>
-                        <li>Prepared and maintained technical and system documentation to support development and ongoing maintenance.</li>
-                        <li>Worked collaboratively with cross-functional teams in an Agile/Scrum environment.</li>
-                        <li>Developed a proof-of-concept Agentic AI system, integrating AI workflows with web applications and databases.</li>
-                        <li>Managed team branches and repository updates (SCM).</li>
-                        <li>Automated UI/backend deployments.</li>
-                        <li>Debugged APIs and monitored Lambda functions (Env Manager).</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+      <a class="download-button" href="Rolyn_Kiunisala_CV.docx" download>
+        Download current CV
+      </a>
     </div>
 
-    <!-- Australian Format -->
-    <div class="australian-format" id="australianFormat">
-        <div class="header-top">
-            <h1>ROLYN KIUNISALA</h1>
-            <p class="title">Software Engineer / Full-Stack Developer</p>
-            <div class="contact-info">
-                <span><a href="mailto:rolykkiunisala@gmail.com" style="color: #000; text-decoration: none;">rolykkiunisala@gmail.com</a></span>
-                <span>+63 9064544620</span>
-                <span>Curva, San-Vicente, Liloan, Cebu</span>
-            </div>
-        </div>
+    <section class="section">
+      <h2>PROFESSIONAL SUMMARY</h2>
+      <p>Full Stack Software Developer with over 3 years of experience in designing, developing, and maintaining enterprise and web-based applications. Skilled in backend and frontend development, API integration, and system enhancement within Agile environments. Experienced in delivering client-based solutions, automation initiatives, and cloud-based deployments. Strong ability to adapt quickly to new technologies and contribute to scalable software systems.</p>
+    </section>
 
-        <div class="section-title">PROFILE SUMMARY</div>
-        <p style="font-size: 0.9em; text-align: justify; margin-bottom: 15px; color: #333;">
-            Software Developer with over 3 years of experience in full-stack web application development. Strong background in backend APIs, database-driven systems, and frontend development using Node.js and Angular. Experienced in Agile environments, system improvements, and cloud-based deployments. Adaptable and quick to learn new technologies.
-        </p>
+    <section class="section">
+      <h2>CORE SKILLS</h2>
+      <ul class="skills-list">
+        <li><strong>Programming Languages:</strong> Java, JavaScript, C#, Python, PHP</li>
+        <li><strong>Frontend:</strong> HTML, CSS/SCSS, Angular, React (basic)</li>
+        <li><strong>Backend:</strong> Node.js, .NET, Java, Python</li>
+        <li><strong>Database:</strong> MySQL, SQL</li>
+        <li><strong>Cloud & DevOps:</strong> AWS, Azure DevOps, CI/CD, Lambda</li>
+        <li><strong>Tools:</strong> Git, GitHub, VS Code, Visual Studio, GitHub Copilot</li>
+        <li><strong>Methodologies:</strong> Agile / Scrum</li>
+        <li><strong>Other:</strong> REST API Development, System Integration, Debugging, Deployment, Network Basics, SCM</li>
+      </ul>
+    </section>
 
-        <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+    <section class="section">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+      <article>
+        <div class="job-title">Full Stack Software Developer</div>
+        <div class="meta">ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present (Project-Based Contract)</div>
+        <ul>
+          <li>Design, develop, and maintain full stack web applications based on client requirements.</li>
+          <li>Develop and integrate REST APIs and backend services using Node.js, Java, and .NET.</li>
+          <li>Build responsive frontend interfaces using Angular and modern web technologies.</li>
+          <li>Perform debugging, troubleshooting, and performance optimization.</li>
+          <li>Collaborate with project managers and technical teams in Agile environment.</li>
+          <li>Participate in system enhancements, testing, and deployment activities.</li>
+          <li>Ensure code quality, scalability, and security compliance.</li>
+        </ul>
+      </article>
+      <article>
+        <div class="job-title">Software Engineering / Packaged App Development Associate</div>
+        <div class="meta">Accenture Inc. – Ebloc 2, Cebu IT Park, Cebu City, Philippines | February 27, 2023 – March 18, 2026</div>
+        <ul>
+          <li>Developed and supported enterprise-level software applications.</li>
+          <li>Worked on packaged application development and system enhancements.</li>
+          <li>Participated in software testing, debugging, and production support.</li>
+          <li>Collaborated with global teams in Agile delivery environment.</li>
+          <li>Delivered system fixes and enhancements within SLA timelines.</li>
+          <li>Supported API integrations and backend services using Java, .NET, and Node.js.</li>
+        </ul>
+      </article>
+    </section>
 
-        <div class="experience-item">
-            <div class="job-period">FEB 2023 - Present</div>
-            <div class="job-title">Junior Software Engineer (Package Application Developer / Web Developer)</div>
-            <div class="job-description">
-                <ul>
-                    <li>Developed and improved web applications, internal systems, and APIs in line with business requirements.</li>
-                    <li>Contributed to both backend and frontend development using Node.js, Angular, Python, and MySQL.</li>
-                    <li>Assisted with application support and maintenance, including bug fixes, performance enhancements, and feature updates.</li>
-                    <li>Participated in requirements discussions, design reviews, and sprint planning with project managers and Product Owner.</li>
-                    <li>Conducted unit testing, troubleshooting, and validation prior to deployment.</li>
-                    <li>Prepared and maintained technical and system documentation to support development and ongoing maintenance.</li>
-                    <li>Worked collaboratively with cross-functional teams in an Agile/Scrum environment.</li>
-                    <li>Developed a proof-of-concept Agentic AI system, integrating AI workflows with web applications and databases.</li>
-                    <li>Managed team branches and repository updates (SCM).</li>
-                    <li>Automated UI/backend deployments.</li>
-                    <li>Debugged APIs and monitored Lambda functions (Env Manager).</li>
-                </ul>
-            </div>
-        </div>
+    <section class="section">
+      <h2>EDUCATION</h2>
+      <article class="education-title">Bachelor of Science in Computer Engineering</article>
+      <div class="meta">University of Cebu – Main Campus, Sanciangko St., Cebu City | 2017 – 2018</div>
+      <article class="education-title">Arcelo Memorial National High School</article>
+      <div class="meta">San Vicente, Liloan, Cebu</div>
+      <article class="education-title">Simeon Ayuda Elementary School</article>
+      <div class="meta">San Vicente, Liloan, Cebu</div>
+    </section>
 
-        <div class="experience-item">
-        <div class="job-period">FEB 27, 2023 - MAR 18, 2026</div>
-        <div class="job-title">Junior Software Engineer (Package Application Developer / Web Developer)</div>            <div class="job-description">
-                <ul>
-                    <li>Developed and improved web applications, internal systems, and APIs in line with business requirements.</li>
-                    <li>Contributed to both backend and frontend development using Node.js, Angular, Python, and MySQL.</li>
-                    <li>Assisted with application support and maintenance, including bug fixes, performance enhancements, and feature updates.</li>
-                </ul>
-            </div>
-        </div>
+    <section class="section">
+      <h2>PROJECT / ACHIEVEMENTS</h2>
+      <article>
+        <div class="achievement-title">GEN AI Mini-Hackathon Winner (Team Project – 5 Members, 2025)</div>
+        <ul>
+          <li>Built a conversational AI agent to guide application teams in creating structured change requests.</li>
+          <li>System collects environment, resources, schedule, and requirement details.</li>
+          <li>Generates structured summary for submission and approval.</li>
+          <li>Strengthened skills in AI integration, automation, and system design.</li>
+          <li>Tools: AI workflows, API integration, collaborative development.</li>
+        </ul>
+      </article>
+    </section>
 
-        <div class="two-column">
-            <div class="column">
-                <div class="section-title">EDUCATION</div>
-                <div style="margin-bottom: 15px;">
-                    <div style="font-weight: bold; color: #000;">Bachelor of Science in Computer Engineering</div>
-                    <div style="font-size: 0.9em; color: #333;">2012 - 2018</div>
-                </div>
+    <section class="section">
+      <h2>KEY STRENGTHS</h2>
+      <ul class="skills-list">
+        <li>Strong analytical and problem-solving skills</li>
+        <li>Ability to work independently and in team environments</li>
+        <li>Fast learner of new technologies</li>
+        <li>Strong communication and collaboration skills</li>
+        <li>Adaptable in fast-paced project environments</li>
+      </ul>
+    </section>
 
-                <div class="section-title">TECHNICAL SKILLS</div>
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS / SCSS</div>
-                <div class="skill-item">Javascript</div>
-                <div class="skill-item">Angular</div>
-                <div class="skill-item">C#</div>
-                <div class="skill-item">Node.JS</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">MySQL</div>
-                <div class="skill-item">AWS</div>
-                <div class="skill-item">AzureDevOps</div>
-                <div class="skill-item">GitHub</div>
-                <div class="skill-item">Network Infrastructure</div>
-                <div class="skill-item">Deployment</div>
-                <div class="skill-item">SCM / Repository Management</div>
-            </div>
-
-            <div class="column">
-                <div class="section-title">TOOLS & TECHNOLOGIES</div>
-                <div class="skill-item">Visual Studio</div>
-                <div class="skill-item">VS Code</div>
-                <div class="skill-item">Github Copilot</div>
-                <div class="skill-item">Agile / Scrum</div>
-
-                <div class="section-title">SOFT SKILLS</div>
-                <div class="skill-item">Attention to detail</div>
-                <div class="skill-item">Time Management</div>
-                <div class="skill-item">Willing to learn</div>
-                <div class="skill-item">Teamwork</div>
-                <div class="skill-item">Problem solving</div>
-                <div class="skill-item">Communication</div>
-
-                <div class="section-title">LANGUAGES</div>
-                <div class="skill-item">English</div>
-                <div class="skill-item">Filipino</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function switchFormat() {
-            const format = document.getElementById('formatSelect').value;
-            const professional = document.getElementById('professionalFormat');
-            const australian = document.getElementById('australianFormat');
-
-            if (format === 'professional') {
-                professional.style.display = 'block';
-                australian.style.display = 'none';
-            } else {
-                professional.style.display = 'none';
-                australian.style.display = 'block';
-            }
-        }
-
-        function downloadPDF() {
-            const format = document.getElementById('formatSelect').value;
-            const element = format === 'professional' 
-                ? document.getElementById('professionalFormat')
-                : document.getElementById('australianFormat');
-
-            const opt = {
-                margin: 10,
-                filename: 'Rolyn-Kiunisala-CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-            };
-
-            html2pdf().set(opt).from(element).save();
-        }
-
-        // Initialize
-        switchFormat();
-    </script>
+    <p class="footer-note"><strong>References:</strong> Available on request.</p>
+  </main>
 </body>
 </html>
