@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolyn Kiunisala | Professional CV</title>
+  <meta name="description" content="Professional format CV for Rolyn Kiunisala with colour styling and photo area." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .page {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+      padding: 28px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .sidebar img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border: 4px solid #e2e8f0;
+      background: #cbd5e1;
+    }
+    .sidebar h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0.02em;
+    }
+    .sidebar p,
+    .sidebar a {
+      margin: 0;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 28px;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .topbar h1 {
+      margin: 0;
+      font-size: clamp(2rem, 2.5vw, 2.6rem);
+    }
+    .tag {
+      color: #0f172a;
+      background: #c7d2fe;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      align-self: flex-start;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .section p,
+    .section li {
+      margin: 0;
+      color: #334155;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .skills-list li {
+      background: #eef2ff;
+      color: #0f172a;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .job-title,
+    .education-title,
+    .achievement-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .meta {
+      margin-bottom: 12px;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+    .nav-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+      .skills-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Profile photo" />
+      <div>
+        <h2>ROLYN KIUNISALA</h2>
+        <p>Full Stack Software Developer</p>
+      </div>
+      <div>
+        <p>Cebu, Philippines</p>
+        <p><a href="mailto:rolynkiunisala@gmail.com">rolynkiunisala@gmail.com</a></p>
+        <p>+63 906 454 4620</p>
+        <p><a href="https://www.linkedin.com/in/rolyn-kiunisala-b862ab377/" target="_blank">linkedin.com/in/rolyn-kiunisala-b862ab377</a></p>
+      </div>
+      <div class="tag">Professional Format</div>
+      <a class="nav-link" href="index.html">Back to Australian CV</a>
+    </aside>
+
+    <section class="content">
+      <div class="topbar">
+        <div>
+          <h1>Professional CV</h1>
+          <p class="meta">Coloured professional layout with photo header.</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2>SUMMARY</h2>
+        <p>Full Stack Software Developer with more than 3 years of experience delivering enterprise and web-based applications. Skilled in backend and frontend development, API integration, automation, and cloud deployment. Proven track record of working within Agile teams to deliver client-focused solutions and maintain system quality.</p>
+      </section>
+
+      <section class="section">
+        <h2>SKILLS</h2>
+        <ul class="skills-list">
+          <li>Java, JavaScript, C#, Python, PHP</li>
+          <li>Angular, React (basic), HTML, CSS/SCSS</li>
+          <li>Node.js, .NET, Java, Python</li>
+          <li>MySQL, SQL</li>
+          <li>AWS, Azure DevOps, CI/CD, Lambda</li>
+          <li>Git, GitHub, VS Code, Visual Studio</li>
+          <li>Agile / Scrum</li>
+          <li>REST API Design, Debugging, Deployment</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>EXPERIENCE</h2>
+        <article>
+          <div class="job-title">Full Stack Software Developer</div>
+          <div class="meta">ALMA Phil Manpower Services Corp. – Cebu City, Philippines | March 18, 2026 – Present</div>
+          <ul>
+            <li>Designed, developed, and maintained full stack web applications.</li>
+            <li>Built REST APIs and backend services with Node.js, Java, and .NET.</li>
+            <li>Developed responsive frontend interfaces using Angular.</li>
+            <li>Handled debugging, troubleshooting, and performance tuning.</li>
+            <li>Collaborated in Agile teams for testing, deployment, and release support.</li>
+          </ul>
+        </article>
+        <article>
+          <div class="job-title">Software Engineering / Packaged App Development Associate</div>
+          <div class="meta">Accenture Inc. – Cebu IT Park, Cebu City | February 27, 2023 – March 18, 2026</div>
+          <ul>
+            <li>Supported enterprise-level packaged application development.</li>
+            <li>Performed system enhancements, debugging, and production support.</li>
+            <li>Collaborated with global teams in an Agile delivery model.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>EDUCATION</h2>
+        <article class="education-title">BSc Computer Engineering</article>
+        <div class="meta">University of Cebu – Main Campus | 2017 – 2018</div>
+        <article class="education-title">Arcelo Memorial National High School</article>
+        <div class="meta">San Vicente, Liloan, Cebu</div>
+      </section>
+
+      <section class="section">
+        <h2>PROJECTS & ACHIEVEMENTS</h2>
+        <article>
+          <div class="achievement-title">GEN AI Mini-Hackathon Winner</div>
+          <div class="meta">Team project, 2025</div>
+          <ul>
+            <li>Built a conversational AI agent for structured change request intake.</li>
+            <li>Collected resources, schedule, environment, and requirement details.</li>
+            <li>Generated submission-ready structured summaries.</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
