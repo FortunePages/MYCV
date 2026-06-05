@@ -76,6 +76,31 @@
       transform: translateY(-1px);
       background: #cbd5e1;
     }
+    .select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .select-group label {
+      font-size: 0.95rem;
+      color: #475569;
+      font-weight: 600;
+    }
+    .select-group select {
+      min-width: 220px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      color: #0f172a;
+      font-size: 0.96rem;
+    }
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
     .section {
       margin-top: 28px;
     }
@@ -157,21 +182,23 @@
         </div>
       </div>
       <div class="button-wrap">
-        <a class="download-button" href="Rolyn_Kiunisala_CV.docx" download>
-          Download Australian CV
-        </a>
-        <a class="secondary-button" href="professional.html">
-          View Professional Format
-        </a>
-        <a class="secondary-button" href="Rolyn_Kiunisala_Professional_CV.docx" download>
-          Download Professional CV
-        </a>
+        <div class="select-group">
+          <label for="cvSelect">Choose format</label>
+          <select id="cvSelect" aria-label="Select CV format">
+            <option value="australian" selected>Australian format</option>
+            <option value="professional">Professional format</option>
+          </select>
+        </div>
+        <div class="action-buttons">
+          <a id="previewButton" class="secondary-button" href="professional.html">
+            Preview selected format
+          </a>
+          <a id="downloadButton" class="download-button" href="Rolyn_Kiunisala_CV.docx" download>
+            Download selected CV
+          </a>
+        </div>
       </div>
     </div>
-
-    <section class="section">
-      <p><strong>Default view:</strong> Australian format. Use the professional version for a colour-styled CV with photographic header.</p>
-    </section>
 
     <section class="section">
       <h2>PROFESSIONAL SUMMARY</h2>
@@ -258,5 +285,24 @@
 
     <p class="footer-note"><strong>References:</strong> Available on request.</p>
   </main>
+  <script>
+    const select = document.getElementById('cvSelect');
+    const previewButton = document.getElementById('previewButton');
+    const downloadButton = document.getElementById('downloadButton');
+
+    function updateLinks() {
+      const value = select.value;
+      if (value === 'professional') {
+        previewButton.href = 'professional.html';
+        downloadButton.href = 'Rolyn_Kiunisala_Professional_CV.docx';
+      } else {
+        previewButton.href = 'index.html';
+        downloadButton.href = 'Rolyn_Kiunisala_CV.docx';
+      }
+    }
+
+    select.addEventListener('change', updateLinks);
+    updateLinks();
+  </script>
 </body>
 </html>
