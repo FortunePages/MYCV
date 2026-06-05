@@ -190,9 +190,6 @@
           </select>
         </div>
         <div class="action-buttons">
-          <a id="previewButton" class="secondary-button" href="professional.html">
-            Preview selected format
-          </a>
           <a id="downloadButton" class="download-button" href="Rolyn_Kiunisala_CV.docx" download>
             Download selected CV
           </a>
@@ -287,22 +284,27 @@
   </main>
   <script>
     const select = document.getElementById('cvSelect');
-    const previewButton = document.getElementById('previewButton');
     const downloadButton = document.getElementById('downloadButton');
 
-    function updateLinks() {
+    function updateDownloadLink() {
+      downloadButton.href = select.value === 'professional'
+        ? 'Rolyn_Kiunisala_Professional_CV.docx'
+        : 'Rolyn_Kiunisala_CV.docx';
+    }
+
+    function autoPreview() {
       const value = select.value;
-      if (value === 'professional') {
-        previewButton.href = 'professional.html';
-        downloadButton.href = 'Rolyn_Kiunisala_Professional_CV.docx';
-      } else {
-        previewButton.href = 'index.html';
-        downloadButton.href = 'Rolyn_Kiunisala_CV.docx';
+      if (value === 'professional' && !location.pathname.endsWith('professional.html')) {
+        window.location.href = 'professional.html';
       }
     }
 
-    select.addEventListener('change', updateLinks);
-    updateLinks();
+    select.addEventListener('change', () => {
+      updateDownloadLink();
+      autoPreview();
+    });
+
+    updateDownloadLink();
   </script>
 </body>
 </html>
